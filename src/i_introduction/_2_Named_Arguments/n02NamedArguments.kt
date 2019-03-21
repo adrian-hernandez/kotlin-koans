@@ -24,6 +24,7 @@ fun todoTask2(): Nothing = TODO(
     references = { collection: Collection<Int> -> task1(collection); collection.joinToString() })
 
 fun task2(collection: Collection<Int>): String {
-    todoTask2()
-    return collection.joinToString()
+    //if all parameters have a default and you want to target the ones in the middle
+    //specify the name of the parameter
+    return collection.joinToString(prefix = "{", postfix = "}")
 }
